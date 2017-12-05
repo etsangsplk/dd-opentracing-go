@@ -16,22 +16,22 @@ This repository contains an example Go app that is instrumented using the new
 ## Initialize dependencies
 
 This project uses `dep` to handle dependencies. To prepare your `vendor` folder,
-launch from your shell::
+launch from your shell:
 
     $ dep ensure
 
 ## Run the example
 
 You should have a running [Datadog Agent](https://github.com/DataDog/dd-agent) to submit traces.
-To run a Datadog Agent, launch the following command::
+To run a Datadog Agent, launch the following command:
 
     $ DD_API_KEY=<API_KEY> docker-compose up
 
-and then you can launch the Go server with::
+and then you can launch the Go server with:
 
     $ go run main.go
 
-To generate traces, you can simply call your endpoint from another shell::
+To generate traces, you can simply call your endpoint from another shell:
 
     $ curl localhost:3000/account/42
 
