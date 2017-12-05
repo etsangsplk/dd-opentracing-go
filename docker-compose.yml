@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  datadog:
+    image: datadog/docker-dd-agent
+    environment:
+      - DD_API_KEY
+      - DD_BIND_HOST=0.0.0.0
+    ports:
+      - "127.0.0.1:8126:8126"
